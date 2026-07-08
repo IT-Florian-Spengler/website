@@ -6,5 +6,26 @@ services:
     image: itfs-website:latest
     container_name: itfs-website
     restart: unless-stopped
+    expose:
+      - "80"
+
+  caddy:
+    image: caddy:2-alpine
+    container_name: itfs-caddy
+    restart: unless-stopped
+    env_file:
+      - .env
     ports:
       - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - website
+
+volumes:
+  caddy_data:
+  caddy_config:

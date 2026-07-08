@@ -1,2 +1,6 @@
 .DS_Store
 **/.DS_Store
+
+# Lokale Umgebungs-/Secrets-Dateien (nicht committen)
+.env
+**/.env
