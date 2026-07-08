@@ -237,6 +237,59 @@
   }
 
   /**
+   * Scroll-Reveal: Elemente mit [data-reveal] blenden sich beim
+   * Scrollen sanft ein. Nur aktiv, wenn solche Elemente vorhanden sind
+   * (nur Startseite) und keine reduzierte Bewegung gewünscht ist.
+   */
+  function initScrollReveal() {
+    var elements = document.querySelectorAll('[data-reveal]');
+
+    if (!elements.length) return;
+
+    var prefersReducedMotion =
+      window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      return;
+    }
+
+    document.documentElement.classList.add('reveal-on');
+
+    var groups = new Map();
+
+    elements.forEach(function (el) {
+      var parent = el.parentElement;
+      if (!groups.has(parent)) {
+        groups.set(parent, []);
+      }
+      groups.get(parent).push(el);
+    });
+
+    groups.forEach(function (items) {
+      items.forEach(function (el, index) {
+        el.style.transitionDelay = Math.min(index * 90, 360) + 'ms';
+      });
+    });
+
+    var observer = new IntersectionObserver(
+      function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
+    );
+
+    elements.forEach(function (el) {
+      observer.observe(el);
+    });
+  }
+
+  /**
    * Copyright-Jahr automatisch setzen
    */
   function initCopyrightYear() {
@@ -256,6 +309,7 @@
     initNavigation();
     initHeroTypewriter();
     initContactForm();
+    initScrollReveal();
     initCopyrightYear();
   }
 

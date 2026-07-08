@@ -41,9 +41,9 @@
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero__inner">
-        <p class="kicker">IT-Dienstleistungen · Raum Stuttgart/Ludwigsburg</p>
+        <p class="kicker" data-reveal>IT-Dienstleistungen · Raum Stuttgart/Ludwigsburg</p>
 
-        <h2 class="hero__title" id="hero-title">
+        <h2 class="hero__title" id="hero-title" data-reveal>
           <span class="hero__title-outline">INFRASTRUKTUR</span>
           <span class="hero__title-solid">
             <span id="typewriter">DIE LÄUFT.</span><span class="typewriter-cursor" aria-hidden="true"></span>
@@ -54,28 +54,53 @@
 
     <section class="section" id="leistungen" aria-labelledby="leistungen-title">
       <div class="container">
-        <div class="section__head">
+        <div class="section__head" data-reveal>
           <span class="section-kicker">Leistungen</span>
-          <h2 class="section-title" id="leistungen-title">IT, die zu Ihrem Betrieb passt</h2>
+          <h2 class="section-title" id="leistungen-title">IT, die zu Ihnen passt</h2>
           <p class="section-lead">Von der ersten Beratung bis zum laufenden Betrieb – klar geplant, sauber dokumentiert und auf das Wesentliche reduziert.</p>
         </div>
 
         <div class="service-grid">
-          <article class="service-card">
+          <article class="service-card" data-reveal>
+            <span class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="7" rx="1.5"/>
+                <rect x="3" y="13" width="18" height="7" rx="1.5"/>
+                <line x1="6.5" y1="7.5" x2="7.5" y2="7.5"/>
+                <line x1="6.5" y1="16.5" x2="7.5" y2="16.5"/>
+              </svg>
+            </span>
             <h3 class="service-card__title">IT-Service &amp; Infrastruktur</h3>
             <p class="service-card__text">Beratung, Einrichtung und Betreuung Ihrer IT – vom Arbeitsplatz bis zur Serverumgebung, verständlich begleitet.</p>
           </article>
-          <article class="service-card">
+          <article class="service-card" data-reveal>
+            <span class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="5" r="2.5"/>
+                <circle cx="5" cy="19" r="2.5"/>
+                <circle cx="19" cy="19" r="2.5"/>
+                <line x1="12" y1="7.5" x2="12" y2="12"/>
+                <line x1="11" y1="13" x2="6.2" y2="16.8"/>
+                <line x1="13" y1="13" x2="17.8" y2="16.8"/>
+              </svg>
+            </span>
             <h3 class="service-card__title">Netzwerk, Server &amp; Betrieb</h3>
             <p class="service-card__text">Stabile Netzwerke, Linux-Server und ein zuverlässiger Betrieb, der im Alltag einfach läuft.</p>
           </article>
-          <article class="service-card">
+          <article class="service-card" data-reveal>
+            <span class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="8 9 4.5 12 8 15"/>
+                <polyline points="16 9 19.5 12 16 15"/>
+                <line x1="13.5" y1="7" x2="10.5" y2="17"/>
+              </svg>
+            </span>
             <h3 class="service-card__title">Websites, Hosting &amp; Entwicklung</h3>
             <p class="service-card__text">Schlanke Websites und passgenaues Hosting – performant, wartbar und ohne unnötigen Ballast.</p>
           </article>
         </div>
 
-        <div class="service-more">
+        <div class="service-more" data-reveal>
           <h3 class="service-more__title">Weitere Unterstützung</h3>
           <ul class="service-more__list">
             <li>Backup &amp; Wiederherstellung</li>
@@ -87,64 +112,101 @@
       </div>
     </section>
 
-    <section class="section section--alt" id="ablauf" aria-labelledby="ablauf-title">
+    <section class="section" id="ablauf" aria-labelledby="ablauf-title">
       <div class="container">
-        <div class="section__head">
-          <span class="section-kicker">Ablauf</span>
-          <h2 class="section-title" id="ablauf-title">In vier Schritten zum Ergebnis</h2>
-          <p class="section-lead">Ein ruhiger, nachvollziehbarer Prozess – ohne Überraschungen.</p>
-        </div>
+        <div class="process-panel">
+          <div class="process-panel__intro" data-reveal>
+            <span class="section-kicker">Ablauf</span>
+            <h2 class="section-title" id="ablauf-title">In vier Schritten zum Ergebnis</h2>
+            <p class="process-panel__lead">Ein strukturierter Ablauf sorgt für Klarheit, minimiert Risiken und bringt Ihr Projekt sicher ans Ziel.</p>
+          </div>
 
-        <ol class="steps">
-          <li class="step">
-            <span class="step__num">01</span>
-            <h3 class="step__title">Erstgespräch</h3>
-            <p class="step__text">Wir klären Ziele, Rahmen und offene Fragen.</p>
-          </li>
-          <li class="step">
-            <span class="step__num">02</span>
-            <h3 class="step__title">Bestandsaufnahme</h3>
-            <p class="step__text">Ich sichte die vorhandene IT und finde die passenden Ansätze.</p>
-          </li>
-          <li class="step">
-            <span class="step__num">03</span>
-            <h3 class="step__title">Umsetzung</h3>
-            <p class="step__text">Änderungen erfolgen geplant, abgestimmt und dokumentiert.</p>
-          </li>
-          <li class="step">
-            <span class="step__num">04</span>
-            <h3 class="step__title">Übergabe &amp; Betreuung</h3>
-            <p class="step__text">Saubere Übergabe und auf Wunsch weitere Begleitung.</p>
-          </li>
-        </ol>
+          <ol class="steps">
+            <li class="step" data-reveal>
+              <span class="step__num">01</span>
+              <div class="step__body">
+                <h3 class="step__title">Erstgespräch</h3>
+                <p class="step__text">Ziele, Rahmen und erste Einschätzung.</p>
+              </div>
+            </li>
+            <li class="step" data-reveal>
+              <span class="step__num">02</span>
+              <div class="step__body">
+                <h3 class="step__title">Bestandsaufnahme</h3>
+                <p class="step__text">Vorhandene Systeme, Anforderungen und Risiken verstehen.</p>
+              </div>
+            </li>
+            <li class="step" data-reveal>
+              <span class="step__num">03</span>
+              <div class="step__body">
+                <h3 class="step__title">Umsetzung</h3>
+                <p class="step__text">Abgestimmt, dokumentiert und möglichst störungsarm umsetzen.</p>
+              </div>
+            </li>
+            <li class="step" data-reveal>
+              <span class="step__num">04</span>
+              <div class="step__body">
+                <h3 class="step__title">Übergabe &amp; Betreuung</h3>
+                <p class="step__text">Dokumentation, kurze Einweisung und weitere Unterstützung nach Bedarf.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="sicherheit" aria-labelledby="sicherheit-title">
+    <section class="section section--alt" id="sicherheit" aria-labelledby="sicherheit-title">
       <div class="container">
-        <div class="approach-panel">
-          <div class="approach-panel__body">
-            <span class="section-kicker">Arbeitsweise</span>
-            <h2 class="section-title" id="sicherheit-title">Geplant ändern statt blind umbauen</h2>
-            <p class="approach-panel__lead">An produktiven Systemen wird nichts dem Zufall überlassen: erst Backup, dann dokumentierte Änderung, getestet und – wo möglich – mit Rollback abgesichert.</p>
+        <div class="section__head" data-reveal>
+          <span class="section-kicker">Arbeitsweise</span>
+          <h2 class="section-title" id="sicherheit-title">Verlässlich arbeiten, sauber betreuen</h2>
+          <p class="section-lead">Planung, Dokumentation und Unterstützung – so halte ich Ihre Systeme stabil und sicher.</p>
+        </div>
+        <div class="work-card">
+          <div class="work-card__col" data-reveal>
+            <span class="work-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="6" y="4" width="12" height="16" rx="1.5"/>
+                <path d="M9.5 4V3.2a1.2 1.2 0 0 1 1.2-1.2h2.6a1.2 1.2 0 0 1 1.2 1.2V4z"/>
+                <path d="M9 12.5l2 2 4-4.5"/>
+              </svg>
+            </span>
+            <div class="work-card__body">
+              <h3 class="work-card__title">Sicher umgesetzt</h3>
+              <p class="work-card__text">Änderungen an produktiven Systemen erfolgen geplant, nachvollziehbar und mit Blick auf Betriebssicherheit. Dazu gehören je nach Projekt Backup, Dokumentation, Tests und eine realistische Rollback-Option.</p>
+            </div>
           </div>
-          <p class="approach-panel__note">Keine 24/7-Zusagen, keine pauschalen SLA-Versprechen und keine Betreuung einsatzkritischer Systeme ohne gesonderte Vereinbarung.</p>
+          <div class="work-card__col" data-reveal>
+            <span class="work-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12a7 7 0 0 1 14 0"/>
+                <rect x="3" y="12" width="3.5" height="6" rx="1.5"/>
+                <rect x="17.5" y="12" width="3.5" height="6" rx="1.5"/>
+                <path d="M19 18v.4a3 3 0 0 1-3 3h-2.5"/>
+              </svg>
+            </span>
+            <div class="work-card__body">
+              <h3 class="work-card__title">Support nach Bedarf</h3>
+              <p class="work-card__text">Support und laufende Betreuung können nach Bedarf vereinbart werden – von planbaren Wartungsfenstern bis zu abgestimmten Reaktionszeiten. Erweiterte Supportzeiten sind nach individueller Vereinbarung möglich.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section contact" id="kontakt" aria-labelledby="kontakt-title">
       <div class="container">
-        <div class="contact__head">
-          <h2 class="section-title" id="kontakt-title">Kontakt</h2>
+        <div class="contact__head" data-reveal>
+          <span class="section-kicker">Kontakt</span>
+          <h2 class="section-title" id="kontakt-title">Sprechen wir über Ihr Anliegen</h2>
           <p>
-            Sie haben ein IT-Anliegen, benötigen Unterstützung bei Infrastruktur, Website,
-            Hosting oder Administration? Schreiben Sie mir kurz, worum es geht.
+            Sie benötigen Unterstützung bei Infrastruktur, Website, Hosting oder
+            Administration? Schreiben Sie mir kurz, worum es geht.
           </p>
         </div>
 
         <div class="contact__grid">
-          <form class="contact-form" id="contact-form">
+          <form class="contact-form" id="contact-form" data-reveal>
             <div class="contact-form__row">
               <div class="form-field">
                 <label for="contact-name">Name *</label>
@@ -214,24 +276,50 @@
           </form>
 
           <aside class="contact-info" aria-label="Kontaktinformationen">
-            <div class="contact-info__block">
-              <span class="contact-info__label">E-Mail</span> 
-                <a href="mailto:kontakt@florian-spengler.de">kontakt@florian-spengler.de</a>
-              </a>
+            <div class="contact-info__block" data-reveal>
+              <span class="contact-info__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="5" width="18" height="14" rx="2"/>
+                  <path d="M3 7.5l9 6 9-6"/>
+                </svg>
+              </span>
+              <div class="contact-info__body">
+                <span class="contact-info__label">E-Mail</span>
+                <p>
+                  <a href="mailto:kontakt@florian-spengler.de">kontakt@florian-spengler.de</a>
+                </p>
+              </div>
             </div>
 
-            <div class="contact-info__block">
-              <span class="contact-info__label">Telefon</span>
-              <a href="tel:+491726480753">0172 / 6480753</a>
+            <div class="contact-info__block" data-reveal>
+              <span class="contact-info__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5a2 2 0 0 1 2-2z"/>
+                </svg>
+              </span>
+              <div class="contact-info__body">
+                <span class="contact-info__label">Telefon</span>
+                <p>
+                  <a href="tel:+491726480753">0172 / 6480753</a>
+                </p>
+              </div>
             </div>
 
-            <div class="contact-info__block">
-              <span class="contact-info__label">Adresse</span>
-              <p>
-                IT Florian Spengler <br>
-                Pforzheimer Straße 13 <br>
-                71706 Schwieberdingen
-              </p>
+            <div class="contact-info__block" data-reveal>
+              <span class="contact-info__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s7-6.3 7-11a7 7 0 0 0-14 0c0 4.7 7 11 7 11z"/>
+                  <circle cx="12" cy="10" r="2.5"/>
+                </svg>
+              </span>
+              <div class="contact-info__body">
+                <span class="contact-info__label">Adresse</span>
+                <p>
+                  IT Florian Spengler<br>
+                  Pforzheimer Straße 13<br>
+                  71706 Schwieberdingen
+                </p>
+              </div>
             </div>
           </aside>
         </div>
