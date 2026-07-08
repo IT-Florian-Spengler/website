@@ -1,0 +1,10 @@
+services:
+  website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: itfs-website:latest
+    container_name: itfs-website
+    restart: unless-stopped
+    ports:
+      - "80:80"
