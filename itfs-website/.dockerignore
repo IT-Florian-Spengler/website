@@ -1,6 +1,4 @@
 .git
 .gitignore
-.dockerignore
-Dockerfile
 README.md
 **/.DS_Store
